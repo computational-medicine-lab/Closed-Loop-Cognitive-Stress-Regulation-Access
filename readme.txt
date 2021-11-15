@@ -1,5 +1,0 @@
-%%% main.slx is the main simulation file. There exist results for six simulated profiles.
-%%% The model parameters required for environmental stimuli forcing function are found as AMP.mat, N.mat, PHA.mat, and R.mat data files. While running the simulation, use the corresponding model parameters on the "stimuli generator" block.
-%%% For each subject, x_0 and alpha values should be updated in the "human brain" block. For each subject, initial values for x_0 and alpha veps_guess should be updated in the "KF" sub-block and "Bayesian Filter" block.
-%%% In.fis and Ex.fis are associated with the inhibitory and excitatory fuzzy control systems, respectively that are used for closing the loop. Input "open-loop" will be zero to reflect the open-loop results.
-%%% For the new control design, please replace the whole controller block and use the designed block to take the estimated stress state from the "Bayesian filter" block and generate the required control signal.

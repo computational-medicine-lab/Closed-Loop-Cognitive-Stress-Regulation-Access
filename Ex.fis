@@ -1,0 +1,33 @@
+[System]
+Name='Exre'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='input1'
+Range=[-4 4]
+NumMFs=3
+MF1='Neutral':'pimf',[-2.07142857142857 -1.02142857142857 -0.121428571428572 0.928571428571428]
+MF2='High_arousal':'smf',[-0.107936507936508 0.642063492063492]
+MF3='Low_arousal':'zmf',[-1.89513227513227 -1.14113227513227]
+
+[Output1]
+Name='output1'
+Range=[-0.0045 0.0045]
+NumMFs=3
+MF1='Inhibitory':'zmf',[-0.00159719576719577 -0.000516195767195768]
+MF2='Excitatory':'smf',[0.0003212 0.001559]
+MF3='Neutral':'pimf',[-0.00189 -0.0004731 0.0004731 0.00189]
+
+[Rules]
+1, 3 (1) : 1
+2, 3 (1) : 1
+3, 2 (1) : 1
